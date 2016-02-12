@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ImageView
+        android:id="@+id/loklak_big"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:src="@drawable/loklak_anonymous"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_below="@id/loklak_big"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:elevation="7dp"
+
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        card_view:cardCornerRadius="4dp">
+
+        <EditText
+            android:id="@+id/info_text"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:hint="Search Loklak network"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/EnterButton"
+        app:cardBackgroundColor="#FF4081"
+        android:layout_marginTop="35dp"
+        android:onClick="launch_engine"
+        android:layout_below="@+id/card_view"
+        android:layout_centerHorizontal="true"
+        android:layout_width="70dp"
+        app:cardCornerRadius="35dp"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:src="@drawable/push"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
